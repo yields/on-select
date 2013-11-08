@@ -6,6 +6,8 @@
 var event = require('event');
 var raf = require('raf');
 var caf = raf.cancel;
+var selected = require('text-selection');
+var mod = require('modifier');
 
 /**
  * Selection
@@ -40,30 +42,3 @@ module.exports = function(el, fn){
     event.unbind(el, 'keyup', callback);
   }
 };
-
-/**
- * Check if there's a selection.
- *
- * @return {Boolean}
- * @api public
- */
-
-function selected(){
-  var range = selection.getRangeAt(0);
-  return range.startOffset < range.endOffset;
-};
-
-/**
- * Check if the keyup event is a modifier.
- *
- * @param {Event} e
- * @return {Boolean}
- * @api public
- */
-
-function mod(e){
-  return e.shiftKey
-    || e.altKey
-    || e.ctrlKey
-    || e.metaKey;
-}
