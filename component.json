@@ -9,6 +9,8 @@
   "scripts": ["index.js"],
   "dependencies": {
     "component/event": "*",
-    "component/raf": "*"
+    "component/raf": "*",
+    "bmcmahen/modifier": "*",
+    "bmcmahen/text-selection": "*"
   }
 }
