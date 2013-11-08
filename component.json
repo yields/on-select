@@ -1,0 +1,14 @@
+{
+  "name": "on-select",
+  "repo": "yields/on-select",
+  "description": "Invoke a callback on user selection",
+  "keywords": ["selection", "on-select", "on-selection"],
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": ["index.js"],
+  "dependencies": {
+    "component/event": "*",
+    "component/raf": "*"
+  }
+}

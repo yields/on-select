@@ -1,0 +1,29 @@
+<style>
+  body {
+    font: 200 14px 'Helvetica Neue';
+    padding: 100px;
+  }
+
+  div {
+    border-left: 3px #eee solid;
+    padding: 8px;
+  }
+
+  :focus {
+    outline: 0 none;
+  }
+</style>
+
+<div contenteditable>select some text... (open devtools)</div>
+
+<script src='build/build.js'></script>
+<script>
+  var el = document.querySelector('div');
+  var select = require('on-select');
+
+  var i = 0;
+  var unbind = select(el, function(e){
+    if (3 == i++) return unbind();
+    console.log(e);
+  });
+</script>
