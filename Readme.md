@@ -25,7 +25,9 @@ function selected(e){
 
 #### onselect(el, fn)
 
-  Invoke `fn(e)` when a user selects within `el`.
+  Invoke `fn(e, str)` when a user selects within `el`.
+
+  `str` is the user selected text.
 
 ## License
 

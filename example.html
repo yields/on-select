@@ -24,6 +24,6 @@
   var i = 0;
   var unbind = select(el, function(e){
     if (3 == i++) return unbind();
-    console.log(e);
+    console.log(arguments);
   });
 </script>

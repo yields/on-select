@@ -3,11 +3,10 @@
  * Dependencies
  */
 
+var selected = require('get-selected-text');
+var mod = require('modifier');
 var event = require('event');
 var raf = require('raf');
-var caf = raf.cancel;
-var selected = require('text-selection');
-var mod = require('modifier');
 
 /**
  * Selection
@@ -28,12 +27,12 @@ module.exports = function(el, fn){
   event.bind(el, 'mouseup', callback);
   event.bind(el, 'keyup', callback);
 
-  var id;
   function callback(e){
     if (mod(e)) return;
-    id = raf(function(){
-      if (selected()) fn(e);
-      caf(id);
+    var id = raf(function(){
+      var str = selected();
+      if (str) fn(e, str);
+      raf.cancel(id);
     });
   }
 

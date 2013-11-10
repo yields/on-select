@@ -8,9 +8,9 @@
   "main": "index.js",
   "scripts": ["index.js"],
   "dependencies": {
-    "component/event": "*",
-    "component/raf": "*",
+    "yields/get-selected-text": "*",
     "bmcmahen/modifier": "*",
-    "bmcmahen/text-selection": "*"
+    "component/event": "*",
+    "component/raf": "*"
   }
 }
