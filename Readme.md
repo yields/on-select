@@ -1,7 +1,7 @@
 
 # on-select
 
-  Invoke a callback on user selection
+  Invoke a callback when the user selects text in the page using the mouse or the keyboard.
 
 ## Installation
 
