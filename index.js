@@ -9,12 +9,6 @@ var event = require('event');
 var raf = require('raf');
 
 /**
- * Selection
- */
-
-var selection = window.getSelection();
-
-/**
  * Invoke `fn(e)` when a user selects within `el`.
  *
  * @param {Element} el
