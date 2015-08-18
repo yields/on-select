@@ -1,4 +1,11 @@
 
+0.1.1 / 2015-08-18
+==================
+
+  * index: remove unused `selection`
+  * Explain supported selection methods
+
+
 0.1.0 / 2013-11-10
 ==================
 
